@@ -1,0 +1,24 @@
+{
+  "title": "Entropy-Clock Counter-rotating Co-genesis: Baryons and ~1.78 GeV Asymmetric Dark Matter from Pre-inflationary Initial Conditions",
+  "description": "Code and data for Entropy-Clock Counter-rotating Co-genesis (ECCG), a mechanism deriving the baryon asymmetry and ~1.78 GeV asymmetric dark matter from pre-inflationary initial conditions.",
+  "creators": [
+    {
+      "name": "Pandev, Stilian",
+      "orcid": "0009-0005-8153-071X",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "baryogenesis",
+    "asymmetric dark matter",
+    "co-genesis",
+    "Affleck-Dine mechanism",
+    "first-order phase transition",
+    "dark sector",
+    "matter-antimatter asymmetry",
+    "sphaleron"
+  ]
+}
