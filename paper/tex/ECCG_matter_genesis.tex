@@ -1,6 +1,7 @@
-% Pandoc template for JHEP (jheppub) on the article class. Engine: xelatex (STIX Two).
-% Engine: xelatex (STIX Two Text) so the prose Unicode + math render.
-\documentclass[11pt,a4paper]{article}
+% Pandoc template for Physical Review D (REVTeX 4.2, preprint/one-column).
+% Engine: pdflatex — REVTeX is pdflatex-native; xelatex+STIX lacks the glyph REVTeX
+% uses for the email footnote marker. Prose Unicode is handled by newunicodechar below.
+\documentclass[aps,prd,preprint,nofootinbib,superscriptaddress]{revtex4-2}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -10,8 +11,14 @@
   \setmainfont{STIX Two Text}
 \fi
 
-\usepackage{jheppub}   % JHEP: natbib[numbers], amsmath, amssymb, graphicx, hyperref
-\usepackage{orcidlink} % ORCID icon next to the author (hyperref already loaded by jcappub)
+\usepackage{amsmath,amssymb,graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{orcidlink}
+
+% make bare math commands the preprocessors may leave in text mode robust (surd etc.)
+\makeatletter
+\let\pandocsurd\surd \renewcommand{\surd}{\ensuremath{\pandocsurd}}
+\makeatother
 
 % --- prose Unicode operators -> math (works under xe/pdf latex) ---
 \usepackage{newunicodechar}
@@ -71,15 +78,21 @@
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \graphicspath{{../}{../figures/}}
 
-% --- front matter (jcappub macros) ---
+\setlength{\emergencystretch}{3em}
+
+\begin{document}
+
 \title{Entropy-Clock Counter-rotating Co-genesis: Baryons and
 \textasciitilde1.78 GeV Asymmetric Dark Matter from Pre-inflationary
 Initial Conditions}
+
 \author{Stilian Pandev\,\orcidlink{0009-0005-8153-071X}}
+\email{stilianpandev@gmail.com}
 \affiliation{Independent researcher}
-\emailAdd{stilianpandev@gmail.com}
-\abstract{We present a mechanism in which the baryon asymmetry and dark
-matter share a single origin fixed by \emph{pre-inflationary initial
+
+\begin{abstract}
+We present a mechanism in which the baryon asymmetry and dark matter
+share a single origin fixed by \emph{pre-inflationary initial
 conditions} rather than thermal freeze-out. Two counter-rotating hidden
 condensates carry a \(\mathrm{U}(1)_{\mathcal{Q}}\) charge with equal
 and opposite sign --- we postulate \(Q_V = -Q_D\) --- so that the
@@ -125,14 +138,12 @@ mechanism without testing it against the null. The magnitude of
 \(\eta_B\) is irreducibly a fit; the microscopic strong-coupling inputs
 (the first-order transition, the confining vacuum, the wall velocity)
 are validated pipelines producing preliminary numbers, not confirmed
-results. We say so throughout, and list the falsifiers.}
+results. We say so throughout, and list the falsifiers.
+\end{abstract}
 
-
-% absorb small unbreakable-line overruns instead of margin overflow
-\setlength{\emergencystretch}{3em}
-
-\begin{document}
 \maketitle
+
+
 \section{Introduction}\label{sec-1}
 
 Two of cosmology's stubborn number problems are the baryon asymmetry
@@ -156,7 +167,7 @@ galactic, Zenodo 10.5281/zenodo.21525537). The scale sector {[}Paper VI
 that this paper's dark-matter horns draw on. The full unification is
 formalized in the umbrella paper {[}Paper V / USC framework{]}, and
 every paper cites the frozen pre-registration falsifier matrix (Zenodo
-\texttt{10.\allowbreak 5281/\allowbreak zenodo.\allowbreak 21415326}).
+\texttt{10.5281/zenodo.21415326}).
 
 The dawn mechanism, ECCG (Entropy-Clock Counter-rotating Co-Genesis),
 works as follows. A hidden gauge sector \(\mathrm{SU}(3)_H\) supports
@@ -248,7 +259,7 @@ charge assignment).
 
 Two independent ECCG codebases converge on this equal-and-opposite
 structure, the transfer ratio \(R_{\rm tr}\), and \(m_X\)
-(\texttt{CROSS\_\allowbreak CHECK\_\allowbreak MEMO.\allowbreak md}: ``AGREE''; \(m_X = 1.33\) vs \(1.3255\)
+(\texttt{CROSS\_CHECK\_MEMO.md}: ``AGREE''; \(m_X = 1.33\) vs \(1.3255\)
 GeV in the older flavored normalization). The counter-rotating structure
 is what makes this a \emph{co-genesis}: the same impulse that populates
 the visible \(B{-}L\) populates the dark charge, with a fixed relative
@@ -279,7 +290,7 @@ the hidden sector. Spontaneous CP violation in the minimal
 generically O(1), peaked at \(\pi/2\) (calculated as a distribution, not
 a single number): the scan gives median \(|\Delta_{\rm CP}| = 1.572\)
 rad, 16--84\% \([1.070, 2.067]\), \(\sin(\Delta_{\rm CP}/2)\) median
-\(0.708\) (\texttt{SPONTANEOUS\_\allowbreak CP\_\allowbreak REPORT}). The symmetric-point value
+\(0.708\) (\texttt{SPONTANEOUS\_CP\_REPORT}). The symmetric-point value
 \(\Delta_{\rm CP} = \pi/2\) is exact but \textbf{not radiatively stable}
 (\(\lambda'' \sim \lambda\lambda'/16\pi^{2}\) is regenerated), so
 \(\pi/2\) is a central value, not a protected prediction --- we quote it
@@ -380,13 +391,13 @@ two reasons, both computed:
 
 This is the \textbf{one genuinely calculated closure} of the mechanism:
 an item that moved from ``assumed'' to ``calculated'' in the audit
-(\texttt{CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}, N4). We flag the honest
+(\texttt{CLOSURES\_assumed\_vs\_calculated.md}, N4). We flag the honest
 caveat carried in the corpus: a \emph{strong-portal} or
 \(\mathrm{SU}(2)_L\)-charged variant would require recomputation, and
 the full recomputation of \(f_B\) with ECCG's added chiral content at
 the sphaleron scale has not been done from scratch --- it is argued to
 reduce to the SM value by singlet-ness and decoupling, not re-derived
-operator-by-operator (\texttt{AUDIT\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}).
+operator-by-operator (\texttt{AUDIT\_assumed\_vs\_calculated.md}).
 Within the benchmark this is safe. We do not inflate it into ``the dawn
 is calculated''; it is one closure, and we present it as the exception,
 not the rule.
@@ -423,13 +434,13 @@ This is \emph{matched}, not predicted:
 inverted for the mass. The flavored-charge ratio \(r_{X,BL}\) is a
 genuine model uncertainty --- \(r_{X,BL} = 1\) gives 1.78 GeV, while the
 older flavored correction gave \textasciitilde1.3 GeV
-(\texttt{CONVENTIONS\_\allowbreak AND\_\allowbreak CORRECTIONS.\allowbreak md}). We adopt
+(\texttt{CONVENTIONS\_AND\_CORRECTIONS.md}). We adopt
 \(m_X \approx 1.78\) GeV as the benchmark, with the honest note that an
 earlier momentum-resolved-transport calculation finds \(m_X\) set by
 \emph{sphaleron timing} (not washout),
 \(m_X = 1.782 \cdot f_{\rm sph}(T_{\rm dec})\), landing at 1.78 GeV in
 \textasciitilde89\% of its viable window
-(\texttt{CONSOLIDATED\_\allowbreak THEORY.\allowbreak md}) --- a preliminary narrowing (single
+(\texttt{CONSOLIDATED\_THEORY.md}) --- a preliminary narrowing (single
 volume/one-loop, not yet converged) that supports, but does not replace,
 the matched normalization.
 
@@ -465,7 +476,7 @@ supplies \(\Omega_{\rm DM}\) via 3→2 (SIMP/cannibal) glueball
 freeze-out, with a \emph{predicted} mass
 \(m_G = 6\Lambda_h = 180\text{–}630\) MeV (calculated across the
 two-loop \(\Lambda_h = 28\text{–}105\) MeV band). Honest ledger entry
-(\texttt{GLUEBALL\_\allowbreak DM\_\allowbreak assessment.\allowbreak md}): the SIMP ``miracle'' here is a
+(\texttt{GLUEBALL\_DM\_assessment.md}): the SIMP ``miracle'' here is a
 \textbf{mass} miracle (\(m_G\) lands where 3→2 works with a natural
 coupling \(\alpha_{\rm eff} \approx 0.25\text{–}0.6\)), \textbf{not an
 abundance miracle}. Pure glue has no renormalizable portal, so the
@@ -586,14 +597,14 @@ We are explicit about a meta-pattern the audit flagged (P3). The ECCG
 corpus contains four ``independent confirmations'' of \(\eta_B\) ---
 from \(\Delta_{\rm CP}\), \(m_3/H\), \(\eta_2\), and \(v_w\) --- but
 each of these is computed through a \textbf{common calibrated
-\texttt{predict\_\allowbreak eta\_\allowbreak B.\allowbreak py}} that already encodes the \(\eta_B\) fit;
+\texttt{predict\_eta\_B.py}} that already encodes the \(\eta_B\) fit;
 each report tunes its own knob (\(\eta_3 = 1\), \(m_3/H\) solved,
 bracket \(= 1\), \(T_*\) free) to reproduce the same
 \(\eta_B \approx 6\times10^{-10}\). So ``four confirmations landing on
 \(\eta_B\)'' is largely \textbf{one fit viewed four ways}. The magnitude
 of \(\eta_B\) (equivalently \(m_3/H\)) is irreducibly a fit: an attempt
 to derive it from maximum-entropy production overshoots by
-\textasciitilde{}\(10^{9}\) (\texttt{USC\_\allowbreak m3\_\allowbreak derivation.\allowbreak md}). In
+\textasciitilde{}\(10^{9}\) (\texttt{USC\_m3\_derivation.md}). In
 fairness, the natural (untuned) forward value is not absurd --- the
 spontaneous-CP scan puts the \emph{median}
 \(\eta_B = 1.21\times10^{-9}\) (16--84\% \([0.87, 1.47]\times10^{-9}\)),
@@ -619,7 +630,7 @@ The mechanism rests on three strong-coupling inputs that cannot be
 closed at desk scale. Their honest status is the single most
 over-claimed thing in prior program-level summaries, and we correct it
 here. Each is now a fully-specified external project with a decision
-rule (\texttt{EXTERNAL\_\allowbreak CALC\_\allowbreak SPECS.\allowbreak md}, items S-1/S-2/S-3).
+rule (\texttt{EXTERNAL\_CALC\_SPECS.md}, items S-1/S-2/S-3).
 
 \textbf{6.1 The first-order transition (S-1).} The 4D one-loop and 3D
 dimensional-reduction legs are robust and give \(S_3/T_n = 52.3\),
@@ -704,8 +715,8 @@ up under the report's own massability structure (four R3 spectator
 pairs, the condensate-ino conjugate pairs, the \(\mathbb{Z}_{31}\)
 spectators), each pair carrying opposite intrinsic CP phases
 \((+1, -1)\) and contributing 0, for a total \(\nu = 0 \bmod 16\)
-(\texttt{PIN16\_\allowbreak assignment\_\allowbreak constructed.\allowbreak md},
-\texttt{S3\_\allowbreak GAUGING\_\allowbreak REPORT}). This is \emph{stronger than
+(\texttt{PIN16\_assignment\_constructed.md},
+\texttt{S3\_GAUGING\_REPORT}). This is \emph{stronger than
 ``satisfiable''} --- the per-pair sign flip never changes the sum, so
 \(\nu = 0\) is automatic given CP-commuting mass dressings, and each
 pair has its own spurion channel so the phases are absorbable one pair
@@ -721,7 +732,7 @@ the count.
 The dawn face is over-determined by several handles that are
 \emph{observationally independent} of one another and of the rest of the
 program. We number the falsifiers; each maps to a pre-registered entry
-(Zenodo \texttt{10.\allowbreak 5281/\allowbreak zenodo.\allowbreak 21415326}).
+(Zenodo \texttt{10.5281/zenodo.21415326}).
 
 \begin{itemize}
 \tightlist
@@ -879,47 +890,47 @@ and reports:
 \tightlist
 \item
   \textbf{Sphaleron / \(f_B\):}
-  \texttt{CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md} (N4); Harvey--Turner
+  \texttt{CLOSURES\_assumed\_vs\_calculated.md} (N4); Harvey--Turner
   counting.
 \item
   \textbf{Spontaneous CP / \(\Delta_{\rm CP}\):}
-  \texttt{spontaneous\_\allowbreak cp.\allowbreak py} → \texttt{SPONTANEOUS\_\allowbreak CP\_\allowbreak REPORT.\allowbreak md}
-  (scan, \texttt{spontaneous\_\allowbreak cp\_\allowbreak scan.\allowbreak csv}, 40,000 draws).
+  \texttt{spontaneous\_cp.py} → \texttt{SPONTANEOUS\_CP\_REPORT.md}
+  (scan, \texttt{spontaneous\_cp\_scan.csv}, 40,000 draws).
 \item
   \textbf{Pre-inflation reheating cure (D-1):}
-  \texttt{sims/\allowbreak preinflation\_\allowbreak reheat\_\allowbreak domain\_\allowbreak check.\allowbreak py} →
-  \texttt{D1\_\allowbreak result\_\allowbreak preinflation\_\allowbreak reheating.\allowbreak md}.
+  \texttt{sims/preinflation\_reheat\_domain\_check.py} →
+  \texttt{D1\_result\_preinflation\_reheating.md}.
 \item
   \textbf{Candidate C neutrino inversion (D-2):}
-  \texttt{sims/\allowbreak candidateC\_\allowbreak neutrino\_\allowbreak inversion.\allowbreak py},
-  \texttt{candidateC\_\allowbreak yield.\allowbreak py} →
-  \texttt{D2\_\allowbreak result\_\allowbreak candidateC\_\allowbreak neutrino.\allowbreak md}; figure
-  \texttt{figures/\allowbreak candidateC\_\allowbreak neutrino\_\allowbreak inversion.\allowbreak png}.
+  \texttt{sims/candidateC\_neutrino\_inversion.py},
+  \texttt{candidateC\_yield.py} →
+  \texttt{D2\_result\_candidateC\_neutrino.md}; figure
+  \texttt{figures/candidateC\_neutrino\_inversion.png}.
 \item
-  \textbf{Wall velocity (S-3):} \texttt{wall\_\allowbreak velocity\_\allowbreak precise.\allowbreak py} →
-  \texttt{WALL\_\allowbreak VELOCITY\_\allowbreak PRECISE\_\allowbreak REPORT.\allowbreak md}.
+  \textbf{Wall velocity (S-3):} \texttt{wall\_velocity\_precise.py} →
+  \texttt{WALL\_VELOCITY\_PRECISE\_REPORT.md}.
 \item
   \textbf{Global scan / benchmark point:}
-  \texttt{GLOBAL\_\allowbreak SCAN\_\allowbreak REPORT.\allowbreak md}.
+  \texttt{GLOBAL\_SCAN\_REPORT.md}.
 \item
   \textbf{Flavor / \(S_3\) gauging / \(\mathrm{Pin}^+\)
-  \(\nu \bmod 16\):} \texttt{FLAVOR\_\allowbreak MODEL\_\allowbreak REPORT.\allowbreak md},
-  \texttt{S3\_\allowbreak GAUGING\_\allowbreak REPORT.\allowbreak md},
-  \texttt{PIN16\_\allowbreak assignment\_\allowbreak constructed.\allowbreak md}.
+  \(\nu \bmod 16\):} \texttt{FLAVOR\_MODEL\_REPORT.md},
+  \texttt{S3\_GAUGING\_REPORT.md},
+  \texttt{PIN16\_assignment\_constructed.md}.
 \item
-  \textbf{Glueball DM horn:} \texttt{sims/\allowbreak glueball\_\allowbreak simp\_\allowbreak relic.\allowbreak py} →
-  \texttt{GLUEBALL\_\allowbreak DM\_\allowbreak assessment.\allowbreak md}.
+  \textbf{Glueball DM horn:} \texttt{sims/glueball\_simp\_relic.py} →
+  \texttt{GLUEBALL\_DM\_assessment.md}.
 \item
   \textbf{External calculation specs (S-1/S-2/S-3):}
-  \texttt{EXTERNAL\_\allowbreak CALC\_\allowbreak SPECS.\allowbreak md} (decision rules).
+  \texttt{EXTERNAL\_CALC\_SPECS.md} (decision rules).
 \item
   \textbf{\(\eta_B\) provenance / P3 meta-pattern:}
-  \texttt{predict\_\allowbreak eta\_\allowbreak B.\allowbreak py}; \texttt{AUDIT\_\allowbreak round2\_\allowbreak sweep.\allowbreak md},
-  \texttt{CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}.
+  \texttt{predict\_eta\_B.py}; \texttt{AUDIT\_round2\_sweep.md},
+  \texttt{CLOSURES\_assumed\_vs\_calculated.md}.
 \item
   \textbf{Pre-registration:}
-  \texttt{PREREGISTRATION\_\allowbreak falsifier\_\allowbreak matrix.\allowbreak md} (Zenodo
-  \texttt{10.\allowbreak 5281/\allowbreak zenodo.\allowbreak 21415326}).
+  \texttt{PREREGISTRATION\_falsifier\_matrix.md} (Zenodo
+  \texttt{10.5281/zenodo.21415326}).
 \end{itemize}
 
 Companion papers: {[}Paper III / SEDE cosmology, Zenodo
@@ -943,6 +954,7 @@ carried out with the assistance of Claude (Anthropic); all claims were
 verified against the corpus's reproducing scripts and reports.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-\bibliographystyle{JHEP}
+
+\bibliographystyle{apsrev4-2}
 \bibliography{refs}
 \end{document}
