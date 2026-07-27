@@ -38,6 +38,8 @@ of $\eta_B$ is irreducibly a fit; the microscopic strong-coupling inputs (the fi
 confining vacuum, the wall velocity) are validated pipelines producing preliminary numbers, not confirmed
 results. We say so throughout, and list the falsifiers.
 
+**Keywords —** baryogenesis; asymmetric dark matter; co-genesis; first-order phase transition; hidden sector; CP violation
+
 ---
 
 ## 1. Introduction

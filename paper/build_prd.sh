@@ -29,6 +29,8 @@ pandoc -f markdown-superscript-subscript .build.md -o tex/$BASE.tex \
 perl -0pi -e 's#\\citet\{#\\citep{#g' tex/$BASE.tex
 
 # number display equations: pandoc emits \[ ... \]; convert to a numbered environment
+# make long monospace paths breakable (prevents right-margin overflow)
+perl -0pi -e 's{\\texttt\{([^{}]*)\}}{"\\texttt{".($1=~s#([/._])#$1\\allowbreak #gr)."}"}ge' tex/$BASE.tex
 perl -0pi -e 's/\\\[/\\begin{equation}/g; s/\\\]/\\end{equation}/g' tex/$BASE.tex
 
 ( cd tex && \
