@@ -94,6 +94,8 @@ program to this honest, narrower position.
 
 ## 2. The mechanism
 
+Figure 1 sets out the mechanism schematically; the rest of this section derives each step.
+
 ![](figures/fig1_mechanism.png)
 
 **Figure 1.** Counter-rotating co-genesis. SU(3)$_H$ counter-rotating condensates ($Q_V=-Q_D$) seed a $B{-}L$ asymmetry that the SM sphaleron transfers to baryons with the calculated fraction $f_B=28/79$, and a shared asymmetry in the dark sector fixing an asymmetric dark-matter density ($m_X\approx1.78$ GeV, $\Omega_{\rm DM}/\Omega_b$ matched). The entropy clock is a Sakharov diagnostic here — by the $R_0=0$ theorem it does not itself source matter.
@@ -191,6 +193,8 @@ calculated"; it is one closure, and we present it as the exception, not the rule
 ---
 
 ## 4. The dark-matter mass and the co-genesis relation
+
+Figure 2 summarises the resulting squeeze on Candidate C, which this section derives.
 
 ![](figures/fig2_candidateC.png)
 
@@ -486,6 +490,12 @@ The results above reproduce from the accompanying analysis scripts in <https://g
 Companion papers: [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21525525], [Paper V / USC framework, Zenodo 10.5281/zenodo.21525529], [Paper VI / scale sector, Zenodo 10.5281/zenodo.21525533], [Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21525537].
 
 ---
+
+## Funding and competing interests
+
+This research received no external funding. The author, an independent researcher, declares no
+competing interests. Ethics approval is not applicable: this work is theoretical and involved no
+human participants, no human data or tissue, and no animal subjects.
 
 ## Acknowledgements
 
