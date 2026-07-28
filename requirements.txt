@@ -1,5 +1,11 @@
 # Figure generation (figures/make_figures.py).
-# Building the PDF (paper/build.sh) additionally requires system tools: pandoc, xelatex,
+# Building the PDF (paper/build_prd.sh) additionally requires system tools: pandoc, xelatex,
 # and pdfinfo (poppler), plus the STIX Two Text / STIX Two Math fonts.
 matplotlib
 numpy
+
+# Analysis scripts recovered into src/ and sims/ (Sec. 12, Reproducibility):
+#   src/spontaneous_cp.py, src/predict_eta_B.py, src/wall_velocity_precise.py,
+#   src/candidateC_yield.py, sims/*.py
+scipy
+pandas

@@ -304,10 +304,17 @@ confirmations" of $\eta_B$ — from $\Delta_{\rm CP}$, $m_3/H$, $\eta_2$, and $v
 confirmations landing on $\eta_B$" is largely **one fit viewed four ways**. The magnitude of $\eta_B$ (equivalently
 $m_3/H$) is irreducibly a fit: an attempt to derive it from maximum-entropy production overshoots by ~10⁹
 (`USC_m3_derivation.md`). In fairness, the natural (untuned) forward value is not absurd — the spontaneous-CP
-scan puts the *median* $\eta_B = 1.21\times10^{-9}$ (16–84% $[0.87, 1.47]\times10^{-9}$), so the observed $6.1\times10^{-10}$ sits at
-roughly the ~29th–38th percentile of the natural distribution rather than at a tuned edge. That is a genuine
-"not fine-tuned to O(1)" statement; it is *not* a derivation of the magnitude, and $m_3/H$ is still solved to hit
-$\eta_B$. We therefore present $\eta_B = 6.1\times10^{-10}$ as **matched, not predicted** (with the rider that the natural
+scan puts the *median* $\eta_B = 1.21\times10^{-9}$ (16–84% $[0.87, 1.47]\times10^{-9}$), within a factor $\simeq 2$
+of the observed $6.1\times10^{-10}$. We state the position of the observed value precisely, because a factor of two
+is not the same as agreement: recomputing directly from the 40,000-draw scan
+(`src/spontaneous_cp.py`, `data/spontaneous_cp_scan.csv`), the observed $\eta_B$ sits at the **6.6th percentile**
+of the natural distribution — below the 16th percentile, i.e. in the lower tail rather than the bulk. So the
+honest statement is bounded on both sides: the model's untuned prediction is the right order of magnitude and
+is *not* fine-tuned to O(1), but it systematically **overshoots** the observed asymmetry by $\simeq 2$, and only
+$\sim 7\%$ of the natural parameter space lands at or below the measured value. That residual factor is
+unexplained: it is the size of a dilution or transfer factor, and identifying its origin — or establishing that
+none exists — is the sharpest open question in this sector. It is *not* a derivation of the magnitude, and
+$m_3/H$ is still solved to hit $\eta_B$. We therefore present $\eta_B = 6.1\times10^{-10}$ as **matched, not predicted** (with the rider that the natural
 value is within ~×2), and the dawn cross-checks as *one consistency, not four predictions*. What is *not* a fit is the neutrino squeeze of §5.2, which follows once
 the fitted $\eta_B$ is combined with the *measured* $\Sigma m_\nu^{2}$ and the reheating window — that is the genuine content
 of Candidate C.
