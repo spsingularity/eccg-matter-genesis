@@ -50,7 +50,7 @@ ratio rather than the many-decade gap one would naively expect from unrelated se
 (ADM) frameworks [@Kaplan:2009ag; @Petraki:2013wwa; @Zurek:2013wia] explain the coincidence by sourcing both sectors from one asymmetry; the price is usually a
 new mechanism to communicate it. This paper is the matter-genesis face of a larger program — the Unified
 Structural-Entropy Cosmogenesis (USC) — which posits a single horizon-entropy "clock"
-$\mathcal{D}_E = (3/2)(1-w)$ joining three physical faces: **dusk** (dark energy without Λ; [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21525525]), **dawn** (this paper), and **galactic** (a MOND readout; Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21525537). The scale sector [Paper VI / scale sector, Zenodo 10.5281/zenodo.21525533] sets the mass scales that this
+$\mathcal{D}_E = (3/2)(1-w)$ joining three physical faces: **dusk** (dark energy without Λ; [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21651614]), **dawn** (this paper), and **galactic** (a MOND readout; Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21652176). The scale sector [Paper VI / scale sector, Zenodo 10.5281/zenodo.21652167] sets the mass scales that this
 paper's dark-matter horns draw on. The full unification is formalized in the umbrella paper [Paper V / USC
 framework], and every paper cites the frozen pre-registration falsifier matrix (Zenodo
 `10.5281/zenodo.21415326`).
@@ -487,7 +487,7 @@ The results above reproduce from the accompanying analysis scripts in <https://g
   `CLOSURES_assumed_vs_calculated.md`.
 - **Pre-registration:** `PREREGISTRATION_falsifier_matrix.md` (Zenodo `10.5281/zenodo.21415326`).
 
-Companion papers: [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21525525], [Paper V / USC framework, Zenodo 10.5281/zenodo.21525529], [Paper VI / scale sector, Zenodo 10.5281/zenodo.21525533], [Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21525537].
+Companion papers: [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21651614], [Paper V / USC framework, Zenodo 10.5281/zenodo.21525529], [Paper VI / scale sector, Zenodo 10.5281/zenodo.21652167], [Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21652176].
 
 ---
 
