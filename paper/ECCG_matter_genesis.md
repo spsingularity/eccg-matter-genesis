@@ -55,6 +55,16 @@ paper's dark-matter horns draw on. The full unification is formalized in the umb
 framework], and every paper cites the frozen pre-registration falsifier matrix (Zenodo
 `10.5281/zenodo.21415326`).
 
+For the reader who has not seen those companions: **this paper is self-contained.** The mechanism of §2,
+the sphaleron transfer of §3, and the central result — the asymmetric dark-matter mass
+$m_X = 1.782\,f_{\rm sph}(T_{\rm dec}) \approx 1.78$ GeV, fixed by sphaleron timing rather than by
+washout — are derived here from the stated hidden-sector content and take no numerical input from any
+companion. The program references above place the construction in its wider setting; the scale-sector
+paper additionally supplies an *optional* alternative horn (a glueball subcomponent, §7), which is one
+branch among those enumerated and not a premise of the main line. Nothing in §§2–5 depends on it. All
+companions are available as open preprints at the DOIs cited, so every reference here resolves to a
+readable manuscript.
+
 The dawn mechanism, ECCG (Entropy-Clock Counter-rotating Co-Genesis), works as follows. A hidden gauge sector
 $\mathrm{SU}(3)_H$ supports two condensates carrying opposite $\mathrm{U}(1)_{\mathcal{Q}}$ charges ($Q_V = -Q_D$). A first-order transition
 in the early universe gives these condensates a CP-odd impulse; the equal-and-opposite charge structure means
