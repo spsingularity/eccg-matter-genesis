@@ -414,8 +414,8 @@ two reasons, both computed:
 
 This is the \textbf{one genuinely calculated closure} of the mechanism:
 an item that moved from ``assumed'' to ``calculated'' in the audit
-(\texttt{CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}, N4). We flag the honest
-caveat carried in the corpus: a \emph{strong-portal} or
+(\texttt{reports/\allowbreak CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}, N4). We flag the
+honest caveat carried in the corpus: a \emph{strong-portal} or
 \(\mathrm{SU}(2)_L\)-charged variant would require recomputation, and
 the full recomputation of \(f_B\) with ECCG's added chiral content at
 the sphaleron scale has not been done from scratch --- it is argued to
@@ -502,12 +502,12 @@ supplies \(\Omega_{\rm DM}\) via 3→2 (SIMP/cannibal) glueball
 freeze-out, with a \emph{predicted} mass
 \(m_G = 6\Lambda_h = 180\text{–}630\) MeV (calculated across the
 two-loop \(\Lambda_h = 28\text{–}105\) MeV band). Honest ledger entry
-(\texttt{GLUEBALL\_\allowbreak DM\_\allowbreak assessment.\allowbreak md}): the SIMP ``miracle'' here is a
-\textbf{mass} miracle (\(m_G\) lands where 3→2 works with a natural
-coupling \(\alpha_{\rm eff} \approx 0.25\text{–}0.6\)), \textbf{not an
-abundance miracle}. Pure glue has no renormalizable portal, so the
-abundance is set by the hidden-to-visible temperature ratio \(\xi\), and
-requires an inflaton branching
+(\texttt{reports/\allowbreak GLUEBALL\_\allowbreak DM\_\allowbreak assessment.\allowbreak md}): the SIMP ``miracle''
+here is a \textbf{mass} miracle (\(m_G\) lands where 3→2 works with a
+natural coupling \(\alpha_{\rm eff} \approx 0.25\text{–}0.6\)),
+\textbf{not an abundance miracle}. Pure glue has no renormalizable
+portal, so the abundance is set by the hidden-to-visible temperature
+ratio \(\xi\), and requires an inflaton branching
 \(\mathrm{Br} \approx (0.4\text{–}3)\times10^{-10}\) selected to
 \textasciitilde40\% --- a dial that \emph{replaces} ADM's explained
 \(\Omega_{\rm DM}/\Omega_b\). This horn uniquely evades the
@@ -623,8 +623,8 @@ We are explicit about a meta-pattern the audit flagged (P3). The ECCG
 corpus contains four ``independent confirmations'' of \(\eta_B\) ---
 from \(\Delta_{\rm CP}\), \(m_3/H\), \(\eta_2\), and \(v_w\) --- but
 each of these is computed through a \textbf{common calibrated
-\texttt{predict\_\allowbreak eta\_\allowbreak B.\allowbreak py}} that already encodes the \(\eta_B\) fit;
-each report tunes its own knob (\(\eta_3 = 1\), \(m_3/H\) solved,
+\texttt{src/\allowbreak predict\_\allowbreak eta\_\allowbreak B.\allowbreak py}} that already encodes the \(\eta_B\)
+fit; each report tunes its own knob (\(\eta_3 = 1\), \(m_3/H\) solved,
 bracket \(= 1\), \(T_*\) free) to reproduce the same
 \(\eta_B \approx 6\times10^{-10}\). So ``four confirmations landing on
 \(\eta_B\)'' is largely \textbf{one fit viewed four ways}. The magnitude
@@ -667,7 +667,7 @@ The mechanism rests on three strong-coupling inputs that cannot be
 closed at desk scale. Their honest status is the single most
 over-claimed thing in prior program-level summaries, and we correct it
 here. Each is now a fully-specified external project with a decision
-rule (\texttt{EXTERNAL\_\allowbreak CALC\_\allowbreak SPECS.\allowbreak md}, items S-1/S-2/S-3).
+rule (\texttt{reports/\allowbreak EXTERNAL\_\allowbreak CALC\_\allowbreak SPECS.\allowbreak md}, items S-1/S-2/S-3).
 
 \textbf{6.1 The first-order transition (S-1).} The 4D one-loop and 3D
 dimensional-reduction legs are robust and give \(S_3/T_n = 52.3\),
@@ -752,7 +752,7 @@ up under the report's own massability structure (four R3 spectator
 pairs, the condensate-ino conjugate pairs, the \(\mathbb{Z}_{31}\)
 spectators), each pair carrying opposite intrinsic CP phases
 \((+1, -1)\) and contributing 0, for a total \(\nu = 0 \bmod 16\)
-(\texttt{PIN16\_\allowbreak assignment\_\allowbreak constructed.\allowbreak md},
+(\texttt{reports/\allowbreak PIN16\_\allowbreak assignment\_\allowbreak constructed.\allowbreak md},
 \texttt{S3\_\allowbreak GAUGING\_\allowbreak REPORT}). This is \emph{stronger than
 ``satisfiable''} --- the per-pair sign flip never changes the sum, so
 \(\nu = 0\) is automatic given CP-commuting mass dressings, and each
@@ -927,52 +927,54 @@ and reports:
 \tightlist
 \item
   \textbf{Sphaleron / \(f_B\):}
-  \texttt{CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md} (N4); Harvey--Turner
-  counting.
+  \texttt{reports/\allowbreak CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md} (N4);
+  Harvey--Turner counting.
 \item
   \textbf{Spontaneous CP / \(\Delta_{\rm CP}\):}
-  \texttt{spontaneous\_\allowbreak cp.\allowbreak py} → \texttt{SPONTANEOUS\_\allowbreak CP\_\allowbreak REPORT.\allowbreak md}
-  (scan, \texttt{spontaneous\_\allowbreak cp\_\allowbreak scan.\allowbreak csv}, 40,000 draws).
+  \texttt{src/\allowbreak spontaneous\_\allowbreak cp.\allowbreak py} →
+  \texttt{reports/\allowbreak SPONTANEOUS\_\allowbreak CP\_\allowbreak REPORT.\allowbreak md} (scan,
+  \texttt{data/\allowbreak spontaneous\_\allowbreak cp\_\allowbreak scan.\allowbreak csv}, 40,000 draws).
 \item
   \textbf{Pre-inflation reheating cure (D-1):}
   \texttt{sims/\allowbreak preinflation\_\allowbreak reheat\_\allowbreak domain\_\allowbreak check.\allowbreak py} →
-  \texttt{D1\_\allowbreak result\_\allowbreak preinflation\_\allowbreak reheating.\allowbreak md}.
+  \texttt{reports/\allowbreak D1\_\allowbreak result\_\allowbreak preinflation\_\allowbreak reheating.\allowbreak md}.
 \item
   \textbf{Candidate C neutrino inversion (D-2):}
   \texttt{sims/\allowbreak candidateC\_\allowbreak neutrino\_\allowbreak inversion.\allowbreak py},
-  \texttt{candidateC\_\allowbreak yield.\allowbreak py} →
-  \texttt{D2\_\allowbreak result\_\allowbreak candidateC\_\allowbreak neutrino.\allowbreak md}; figure
+  \texttt{src/\allowbreak candidateC\_\allowbreak yield.\allowbreak py} →
+  \texttt{reports/\allowbreak D2\_\allowbreak result\_\allowbreak candidateC\_\allowbreak neutrino.\allowbreak md}; figure
   \texttt{figures/\allowbreak candidateC\_\allowbreak neutrino\_\allowbreak inversion.\allowbreak png}.
 \item
-  \textbf{Wall velocity (S-3):} \texttt{wall\_\allowbreak velocity\_\allowbreak precise.\allowbreak py} →
-  \texttt{WALL\_\allowbreak VELOCITY\_\allowbreak PRECISE\_\allowbreak REPORT.\allowbreak md}.
+  \textbf{Wall velocity (S-3):} \texttt{src/\allowbreak wall\_\allowbreak velocity\_\allowbreak precise.\allowbreak py}
+  → \texttt{reports/\allowbreak WALL\_\allowbreak VELOCITY\_\allowbreak PRECISE\_\allowbreak REPORT.\allowbreak md}.
 \item
   \textbf{Global scan / benchmark point:}
-  \texttt{GLOBAL\_\allowbreak SCAN\_\allowbreak REPORT.\allowbreak md}.
+  \texttt{reports/\allowbreak GLOBAL\_\allowbreak SCAN\_\allowbreak REPORT.\allowbreak md}.
 \item
   \textbf{Flavor / \(S_3\) gauging / \(\mathrm{Pin}^+\)
-  \(\nu \bmod 16\):} \texttt{FLAVOR\_\allowbreak MODEL\_\allowbreak REPORT.\allowbreak md},
-  \texttt{S3\_\allowbreak GAUGING\_\allowbreak REPORT.\allowbreak md},
-  \texttt{PIN16\_\allowbreak assignment\_\allowbreak constructed.\allowbreak md}.
+  \(\nu \bmod 16\):} \texttt{reports/\allowbreak FLAVOR\_\allowbreak MODEL\_\allowbreak REPORT.\allowbreak md},
+  \texttt{reports/\allowbreak S3\_\allowbreak GAUGING\_\allowbreak REPORT.\allowbreak md},
+  \texttt{reports/\allowbreak PIN16\_\allowbreak assignment\_\allowbreak constructed.\allowbreak md}.
 \item
   \textbf{Glueball DM horn:} \texttt{sims/\allowbreak glueball\_\allowbreak simp\_\allowbreak relic.\allowbreak py} →
-  \texttt{GLUEBALL\_\allowbreak DM\_\allowbreak assessment.\allowbreak md}.
+  \texttt{reports/\allowbreak GLUEBALL\_\allowbreak DM\_\allowbreak assessment.\allowbreak md}.
 \item
   \textbf{External calculation specs (S-1/S-2/S-3):}
-  \texttt{EXTERNAL\_\allowbreak CALC\_\allowbreak SPECS.\allowbreak md} (decision rules).
+  \texttt{reports/\allowbreak EXTERNAL\_\allowbreak CALC\_\allowbreak SPECS.\allowbreak md} (decision rules).
 \item
   \textbf{\(\eta_B\) provenance / P3 meta-pattern:}
-  \texttt{predict\_\allowbreak eta\_\allowbreak B.\allowbreak py}; \texttt{AUDIT\_\allowbreak round2\_\allowbreak sweep.\allowbreak md},
-  \texttt{CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}.
+  \texttt{src/\allowbreak predict\_\allowbreak eta\_\allowbreak B.\allowbreak py};
+  \texttt{reports/\allowbreak AUDIT\_\allowbreak round2\_\allowbreak sweep.\allowbreak md},
+  \texttt{reports/\allowbreak CLOSURES\_\allowbreak assumed\_\allowbreak vs\_\allowbreak calculated.\allowbreak md}.
 \item
   \textbf{Pre-registration:}
-  \texttt{PREREGISTRATION\_\allowbreak falsifier\_\allowbreak matrix.\allowbreak md} (Zenodo
+  \texttt{reports/\allowbreak PREREGISTRATION\_\allowbreak falsifier\_\allowbreak matrix.\allowbreak md} (Zenodo
   \texttt{10.\allowbreak 5281/\allowbreak zenodo.\allowbreak 21415326}).
 \end{itemize}
 
 Companion papers: {[}Paper III / SEDE cosmology, Zenodo
 10.5281/zenodo.21651614{]}, {[}Paper V / USC framework, Zenodo
-10.5281/zenodo.21525529{]}, {[}Paper VI / scale sector, Zenodo
+10.5281/zenodo.21724372{]}, {[}Paper VI / scale sector, Zenodo
 10.5281/zenodo.21652167{]}, {[}Paper VIII / APDM galactic, Zenodo
 10.5281/zenodo.21652176{]}.
 
@@ -990,14 +992,17 @@ no human data or tissue, and no animal subjects.
 \section*{Acknowledgements}\label{acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
-We thank the ECCG development team whose gap-closure reports (with their
-explicit VALIDATED / PRELIMINARY / DIGITIZED / QUALITATIVE tags) set the
-audit culture this paper inherits; carrying those tags upward is the
-central discipline of this manuscript.
+The gap-closure reports of the ECCG development corpus --- with their
+explicit VALIDATED / PRELIMINARY / DIGITIZED / QUALITATIVE tags --- set
+the audit culture this paper inherits; carrying those tags upward is the
+central discipline of this manuscript. That corpus is the author's own
+prior development record, produced with the AI assistance described
+below.
 
 \textbf{AI assistance:} the analysis and drafting of this paper were
-carried out with the assistance of Claude (Anthropic); all claims were
-verified against the corpus's reproducing scripts and reports.
+carried out with the assistance of Claude Opus 4.x (Anthropic); all
+claims were verified against the corpus's reproducing scripts and
+reports. No AI tool is an author.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 

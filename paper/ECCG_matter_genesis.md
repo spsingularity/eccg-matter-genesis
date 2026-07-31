@@ -193,7 +193,7 @@ dark sector. It does, for two reasons, both computed:
    value.
 
 This is the **one genuinely calculated closure** of the mechanism: an item that moved from "assumed" to
-"calculated" in the audit (`CLOSURES_assumed_vs_calculated.md`, N4). We flag the honest caveat carried in the
+"calculated" in the audit (`reports/CLOSURES_assumed_vs_calculated.md`, N4). We flag the honest caveat carried in the
 corpus: a *strong-portal* or $\mathrm{SU}(2)_L$-charged variant would require recomputation, and the full recomputation
 of $f_B$ with ECCG's added chiral content at the sphaleron scale has not been done from scratch — it is argued
 to reduce to the SM value by singlet-ness and decoupling, not re-derived operator-by-operator
@@ -242,7 +242,7 @@ $\Omega_{\rm DM}/\Omega_b$ coincidence is one equation in two unknowns. This is 
 **Horn (iii) — glueball one-sector.** The same hidden confining sector that generates the μ scale [Paper VI /
 scale sector] supplies $\Omega_{\rm DM}$ via 3→2 (SIMP/cannibal) glueball freeze-out, with a *predicted* mass
 $m_G = 6\Lambda_h = 180\text{–}630$ MeV (calculated across the two-loop $\Lambda_h = 28\text{–}105$ MeV band). Honest ledger entry
-(`GLUEBALL_DM_assessment.md`): the SIMP "miracle" here is a **mass** miracle ($m_G$ lands where 3→2 works with a
+(`reports/GLUEBALL_DM_assessment.md`): the SIMP "miracle" here is a **mass** miracle ($m_G$ lands where 3→2 works with a
 natural coupling $\alpha_{\rm eff} \approx 0.25\text{–}0.6$), **not an abundance miracle**. Pure glue has no renormalizable portal, so
 the abundance is set by the hidden-to-visible temperature ratio $\xi$, and requires an inflaton branching
 $\mathrm{Br} \approx (0.4\text{–}3)\times10^{-10}$ selected to ~40% — a dial that *replaces* ADM's explained $\Omega_{\rm DM}/\Omega_b$. This horn uniquely
@@ -309,7 +309,7 @@ the exact ceiling.
 
 We are explicit about a meta-pattern the audit flagged (P3). The ECCG corpus contains four "independent
 confirmations" of $\eta_B$ — from $\Delta_{\rm CP}$, $m_3/H$, $\eta_2$, and $v_w$ — but each of these is computed through a
-**common calibrated `predict_eta_B.py`** that already encodes the $\eta_B$ fit; each report tunes its own knob
+**common calibrated `src/predict_eta_B.py`** that already encodes the $\eta_B$ fit; each report tunes its own knob
 ($\eta_3 = 1$, $m_3/H$ solved, bracket $= 1$, $T_*$ free) to reproduce the same $\eta_B \approx 6\times10^{-10}$. So "four
 confirmations landing on $\eta_B$" is largely **one fit viewed four ways**. The magnitude of $\eta_B$ (equivalently
 $m_3/H$) is irreducibly a fit: an attempt to derive it from maximum-entropy production overshoots by ~10⁹
@@ -335,7 +335,7 @@ of Candidate C.
 
 The mechanism rests on three strong-coupling inputs that cannot be closed at desk scale. Their honest status is
 the single most over-claimed thing in prior program-level summaries, and we correct it here. Each is now a
-fully-specified external project with a decision rule (`EXTERNAL_CALC_SPECS.md`, items S-1/S-2/S-3).
+fully-specified external project with a decision rule (`reports/EXTERNAL_CALC_SPECS.md`, items S-1/S-2/S-3).
 
 **6.1 The first-order transition (S-1).** The 4D one-loop and 3D dimensional-reduction legs are robust and give
 $S_3/T_n = 52.3$, $\beta/H = 347$, $\alpha = 0.027$ at $T_n \approx 3.2\times10^{12}$ GeV (calculated, within the matched EFT). The
@@ -387,7 +387,7 @@ contributes $\nu = \pm1 \bmod 16$, and consistency requires the total $\nu = 0 \
 satisfying assignment** (an explicit construction, weaker than a derivation): the ~16 CP-relevant Weyl fermions of the R3 realization
 pair up under the report's own massability structure (four R3 spectator pairs, the condensate-ino conjugate
 pairs, the $\mathbb{Z}_{31}$ spectators), each pair carrying opposite intrinsic CP phases $(+1, -1)$ and contributing 0, for
-a total $\nu = 0 \bmod 16$ (`PIN16_assignment_constructed.md`, `S3_GAUGING_REPORT`). This is *stronger than
+a total $\nu = 0 \bmod 16$ (`reports/PIN16_assignment_constructed.md`, `S3_GAUGING_REPORT`). This is *stronger than
 "satisfiable"* — the per-pair sign flip never changes the sum, so $\nu = 0$ is automatic given CP-commuting mass
 dressings, and each pair has its own spurion channel so the phases are absorbable one pair at a time. But we say
 plainly: **this is a construction, not a derivation.** It shows a consistent assignment exists; it does not show
@@ -486,25 +486,25 @@ falsifiable existence proof with one calculated closure, whose remaining ignoran
 
 The results above reproduce from the accompanying analysis scripts in <https://github.com/spsingularity/eccg-matter-genesis> (a tagged release is archived at Zenodo, DOI 10.5281/zenodo.21525535). Key scripts and reports:
 
-- **Sphaleron / $f_B$:** `CLOSURES_assumed_vs_calculated.md` (N4); Harvey–Turner counting.
-- **Spontaneous CP / $\Delta_{\rm CP}$:** `spontaneous_cp.py` → `SPONTANEOUS_CP_REPORT.md` (scan, `spontaneous_cp_scan.csv`,
+- **Sphaleron / $f_B$:** `reports/CLOSURES_assumed_vs_calculated.md` (N4); Harvey–Turner counting.
+- **Spontaneous CP / $\Delta_{\rm CP}$:** `src/spontaneous_cp.py` → `reports/SPONTANEOUS_CP_REPORT.md` (scan, `data/spontaneous_cp_scan.csv`,
   40,000 draws).
 - **Pre-inflation reheating cure (D-1):** `sims/preinflation_reheat_domain_check.py` →
-  `D1_result_preinflation_reheating.md`.
+  `reports/D1_result_preinflation_reheating.md`.
 - **Candidate C neutrino inversion (D-2):** `sims/candidateC_neutrino_inversion.py`,
-  `candidateC_yield.py` → `D2_result_candidateC_neutrino.md`; figure
+  `src/candidateC_yield.py` → `reports/D2_result_candidateC_neutrino.md`; figure
   `figures/candidateC_neutrino_inversion.png`.
-- **Wall velocity (S-3):** `wall_velocity_precise.py` → `WALL_VELOCITY_PRECISE_REPORT.md`.
-- **Global scan / benchmark point:** `GLOBAL_SCAN_REPORT.md`.
-- **Flavor / $S_3$ gauging / $\mathrm{Pin}^+$ $\nu \bmod 16$:** `FLAVOR_MODEL_REPORT.md`, `S3_GAUGING_REPORT.md`,
-  `PIN16_assignment_constructed.md`.
-- **Glueball DM horn:** `sims/glueball_simp_relic.py` → `GLUEBALL_DM_assessment.md`.
-- **External calculation specs (S-1/S-2/S-3):** `EXTERNAL_CALC_SPECS.md` (decision rules).
-- **$\eta_B$ provenance / P3 meta-pattern:** `predict_eta_B.py`; `AUDIT_round2_sweep.md`,
-  `CLOSURES_assumed_vs_calculated.md`.
-- **Pre-registration:** `PREREGISTRATION_falsifier_matrix.md` (Zenodo `10.5281/zenodo.21415326`).
+- **Wall velocity (S-3):** `src/wall_velocity_precise.py` → `reports/WALL_VELOCITY_PRECISE_REPORT.md`.
+- **Global scan / benchmark point:** `reports/GLOBAL_SCAN_REPORT.md`.
+- **Flavor / $S_3$ gauging / $\mathrm{Pin}^+$ $\nu \bmod 16$:** `reports/FLAVOR_MODEL_REPORT.md`, `reports/S3_GAUGING_REPORT.md`,
+  `reports/PIN16_assignment_constructed.md`.
+- **Glueball DM horn:** `sims/glueball_simp_relic.py` → `reports/GLUEBALL_DM_assessment.md`.
+- **External calculation specs (S-1/S-2/S-3):** `reports/EXTERNAL_CALC_SPECS.md` (decision rules).
+- **$\eta_B$ provenance / P3 meta-pattern:** `src/predict_eta_B.py`; `reports/AUDIT_round2_sweep.md`,
+  `reports/CLOSURES_assumed_vs_calculated.md`.
+- **Pre-registration:** `reports/PREREGISTRATION_falsifier_matrix.md` (Zenodo `10.5281/zenodo.21415326`).
 
-Companion papers: [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21651614], [Paper V / USC framework, Zenodo 10.5281/zenodo.21525529], [Paper VI / scale sector, Zenodo 10.5281/zenodo.21652167], [Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21652176].
+Companion papers: [Paper III / SEDE cosmology, Zenodo 10.5281/zenodo.21651614], [Paper V / USC framework, Zenodo 10.5281/zenodo.21724372], [Paper VI / scale sector, Zenodo 10.5281/zenodo.21652167], [Paper VIII / APDM galactic, Zenodo 10.5281/zenodo.21652176].
 
 ---
 
@@ -516,12 +516,13 @@ human participants, no human data or tissue, and no animal subjects.
 
 ## Acknowledgements
 
-We thank the ECCG development team whose gap-closure reports (with their explicit VALIDATED / PRELIMINARY /
-DIGITIZED / QUALITATIVE tags) set the audit culture this paper inherits; carrying those tags upward is the
-central discipline of this manuscript.
+The gap-closure reports of the ECCG development corpus — with their explicit VALIDATED / PRELIMINARY /
+DIGITIZED / QUALITATIVE tags — set the audit culture this paper inherits; carrying those tags upward is the
+central discipline of this manuscript. That corpus is the author's own prior development record, produced
+with the AI assistance described below.
 
-**AI assistance:** the analysis and drafting of this paper were carried out with the assistance of Claude
-(Anthropic); all claims were verified against the corpus's reproducing scripts and reports.
+**AI assistance:** the analysis and drafting of this paper were carried out with the assistance of Claude Opus 4.x (Anthropic); all claims were verified against the corpus's reproducing scripts
+and reports. No AI tool is an author.
 
 ---
 
