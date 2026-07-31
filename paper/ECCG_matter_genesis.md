@@ -122,7 +122,7 @@ conservation law,
 > (calculated, given the charge assignment).
 
 Two independent ECCG codebases converge on this equal-and-opposite structure, the transfer ratio $R_{\rm tr}$, and
-$m_X$ (`CROSS_CHECK_MEMO.md`: "AGREE"; $m_X = 1.33$ vs $1.3255$ GeV in the older flavored normalization). The
+$m_X$ (`reports/CROSS_CHECK_MEMO.md`: "AGREE"; $m_X = 1.33$ vs $1.3255$ GeV in the older flavored normalization). The
 counter-rotating structure is what makes this a *co-genesis*: the same impulse that populates the visible
 $B{-}L$ populates the dark charge, with a fixed relative sign, so the two abundances are locked together. This
 conserved counter-rotating charge structure — equal-and-opposite $Q_V = -Q_D$ with a conserved comoving
