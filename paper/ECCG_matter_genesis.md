@@ -197,7 +197,7 @@ This is the **one genuinely calculated closure** of the mechanism: an item that 
 corpus: a *strong-portal* or $\mathrm{SU}(2)_L$-charged variant would require recomputation, and the full recomputation
 of $f_B$ with ECCG's added chiral content at the sphaleron scale has not been done from scratch — it is argued
 to reduce to the SM value by singlet-ness and decoupling, not re-derived operator-by-operator
-(`AUDIT_assumed_vs_calculated.md`). Within the benchmark this is safe. We do not inflate it into "the dawn is
+(`reports/AUDIT_assumed_vs_calculated.md`). Within the benchmark this is safe. We do not inflate it into "the dawn is
 calculated"; it is one closure, and we present it as the exception, not the rule.
 
 ---
@@ -218,10 +218,10 @@ asymmetry to yield the observed $\Omega_{\rm DM}/\Omega_b$:
 
 This is *matched*, not predicted: $\Omega_{\rm DM}/\Omega_b = 5.36$ is adopted from observation and inverted for the mass. The
 flavored-charge ratio $r_{X,BL}$ is a genuine model uncertainty — $r_{X,BL} = 1$ gives 1.78 GeV, while the
-older flavored correction gave ~1.3 GeV (`CONVENTIONS_AND_CORRECTIONS.md`). We adopt $m_X \approx 1.78$ GeV as the
+older flavored correction gave ~1.3 GeV (`reports/CONVENTIONS_AND_CORRECTIONS.md`). We adopt $m_X \approx 1.78$ GeV as the
 benchmark, with the honest note that an earlier momentum-resolved-transport calculation finds $m_X$ set by
 *sphaleron timing* (not washout), $m_X = 1.782 \cdot f_{\rm sph}(T_{\rm dec})$, landing at 1.78 GeV in ~89% of its viable
-window (`CONSOLIDATED_THEORY.md`) — a preliminary narrowing (single volume/one-loop, not yet converged) that
+window (`reports/CONSOLIDATED_THEORY.md`) — a preliminary narrowing (single volume/one-loop, not yet converged) that
 supports, but does not replace, the matched normalization.
 
 The dark matter is cold, asymmetric, and phenomenologically near-invisible: $\sigma_{\rm SI} \sim 2\times10^{-48}$ cm$^{2}$, below the
@@ -313,7 +313,7 @@ confirmations" of $\eta_B$ — from $\Delta_{\rm CP}$, $m_3/H$, $\eta_2$, and $v
 ($\eta_3 = 1$, $m_3/H$ solved, bracket $= 1$, $T_*$ free) to reproduce the same $\eta_B \approx 6\times10^{-10}$. So "four
 confirmations landing on $\eta_B$" is largely **one fit viewed four ways**. The magnitude of $\eta_B$ (equivalently
 $m_3/H$) is irreducibly a fit: an attempt to derive it from maximum-entropy production overshoots by ~10⁹
-(`USC_m3_derivation.md`). In fairness, the natural (untuned) forward value is not absurd — the spontaneous-CP
+(`reports/USC_m3_derivation.md`). In fairness, the natural (untuned) forward value is not absurd — the spontaneous-CP
 scan puts the *median* $\eta_B = 1.21\times10^{-9}$ (16–84% $[0.87, 1.47]\times10^{-9}$), within a factor $\simeq 2$
 of the observed $6.1\times10^{-10}$. We state the position of the observed value precisely, because a factor of two
 is not the same as agreement: recomputing directly from the 40,000-draw scan
