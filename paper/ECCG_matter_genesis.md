@@ -484,7 +484,7 @@ falsifiable existence proof with one calculated closure, whose remaining ignoran
 
 ## 12. Reproducibility
 
-The results above reproduce from the accompanying analysis scripts in <https://github.com/spsingularity/eccg-matter-genesis> (a tagged release is archived at Zenodo, DOI 10.5281/zenodo.21525535). Key scripts and reports:
+The results above reproduce from the accompanying analysis scripts in <https://github.com/spsingularity/eccg-matter-genesis> (a tagged release is archived at Zenodo, DOI 10.5281/zenodo.21525534). Key scripts and reports:
 
 - **Sphaleron / $f_B$:** `reports/CLOSURES_assumed_vs_calculated.md` (N4); Harvey–Turner counting.
 - **Spontaneous CP / $\Delta_{\rm CP}$:** `src/spontaneous_cp.py` → `reports/SPONTANEOUS_CP_REPORT.md` (scan, `data/spontaneous_cp_scan.csv`,
